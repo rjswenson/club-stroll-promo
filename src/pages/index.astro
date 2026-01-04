@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
 ---
 
 <BaseLayout title="Club Stroll | Kansas City Jazz & Nightlife Interactive Play">
@@ -10,30 +11,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </header>
 
     <section class="hero">
-      <h2>Experience the Roaring Twenties</h2>
-      <p>
-        Step back in time to Kansas City's legendary jazz and nightlife scene.
-        Club Stroll is an interactive theatrical experience featuring immersive
-        storytelling, live performances, and audience participation.
-      </p>
-    </section>
-
-    <section class="features">
-      <h2>What to Expect</h2>
-      <div class="feature-grid">
-        <div class="feature">
-          <h3>Immersive Storytelling</h3>
-          <p>Experience Kansas City's jazz age through engaging narratives and historical authenticity.</p>
-        </div>
-        <div class="feature">
-          <h3>Live Performances</h3>
-          <p>Authentic performances that capture the vibrant spirit of the 1920s.</p>
-        </div>
-        <div class="feature">
-          <h3>Audience Participation</h3>
-          <p>Become part of the story in this interactive theatrical experience.</p>
-        </div>
+      <div class="video-wrapper">
+        <VideoEmbed title="Club Stroll Preview" />
       </div>
+      <p class="hero-description">
+        Step back in time to Kansas City's legendary jazz and nightlife scene
+      </p>
     </section>
 
     <footer>
@@ -51,7 +34,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   header {
     text-align: center;
-    padding: 4rem 0 2rem;
+    padding: 3rem 0 2rem;
   }
 
   h1 {
@@ -68,75 +51,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-style: italic;
   }
 
-  section {
-    margin: 4rem 0;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-primary);
-  }
-
   .hero {
+    margin: 3rem 0;
+  }
+
+  .video-wrapper {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+  }
+
+  .hero-description {
     text-align: center;
-    padding: 3rem 2rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .hero p {
     font-size: 1.25rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .features {
-    padding: 2rem 0;
-  }
-
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .feature {
-    padding: 2rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-accent);
-  }
-
-  .feature p {
-    line-height: 1.6;
     color: #666;
+    font-style: italic;
+    margin-top: 2rem;
   }
 
   footer {
     text-align: center;
-    padding: 3rem 0;
+    padding: 3rem 0 2rem;
     color: #666;
     border-top: 1px solid #ddd;
     margin-top: 4rem;
   }
 
   @media (max-width: 768px) {
-    h1 {
-      font-size: 3rem;
+    main {
+      padding: 1rem;
     }
 
-    .feature-grid {
-      grid-template-columns: 1fr;
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+    }
+
+    header {
+      padding: 2rem 0 1rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      padding: 0 1rem;
     }
   }
 </style>
