@@ -94,4 +94,4 @@ This static site can be deployed to any of the following platforms:
 - Output directory: `dist/`
 - No environment variables required
 
-**Configured Site URL:** https://club-stroll.7un.me (see astro.config.mjs:5)
+**Configured Site URL:** https://clubstrollkc.com (see astro.config.mjs:5)
