@@ -1,5 +1,7 @@
 # Club Stroll Interactive Play
 
+[![Integration Tests](https://github.com/rjswenson/club-stroll-promo/actions/workflows/test.yml/badge.svg)](https://github.com/rjswenson/club-stroll-promo/actions/workflows/test.yml)
+
 In-person interactive play based on Kansas City's rich history of jazz and nightlife.
 
 ## Overview
@@ -18,6 +20,29 @@ Club Stroll is an immersive theatrical experience that brings the vibrant era of
 - **Framework**: Astro
 - **Focus**: SEO, Marketing, Performance
 - **Type**: Promotional Website
+- **Testing**: Playwright (E2E and integration tests)
+- **CI/CD**: GitHub Actions
+
+## Testing
+
+This project uses **Playwright** for end-to-end and integration testing.
+
+### Running Tests
+
+```bash
+npm test              # Run all tests headlessly
+npm run test:ui       # Interactive UI mode for debugging
+npm run test:headed   # Watch tests execute in browser
+npm run test:report   # View HTML report from last run
+```
+
+### Test Coverage
+
+- **Page Load Tests**: Home page, navigation, 404 handling
+- **Content Verification**: Video embed, semantic structure, responsive design
+- **CI/CD**: Tests run automatically on every push and pull request via GitHub Actions
+
+See [tests/README.md](tests/README.md) for more details.
 
 ## Project Status
 
